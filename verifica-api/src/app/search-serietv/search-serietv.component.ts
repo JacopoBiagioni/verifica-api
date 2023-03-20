@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-search-serietv',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./search-serietv.component.css']
 })
 export class SearchSerietvComponent {
+
+  obsSearch! : Observable<Object>
+
+  constructor () { }
 
 }
