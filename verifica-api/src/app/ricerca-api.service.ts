@@ -5,20 +5,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http'
   providedIn: 'root'
 })
 export class RicercaApiService {
-
+  
   constructor(private http : HttpClient) { }
 
-  searchSerie () { 
+  searchSerie (query: string) {
+  
     const url = 'https://api.tvmaze.com/search/shows?q=${query}'
-    const headers = new HttpHeaders({
-      Authorization:
-      'Bearer'
-    })
-
-
-    let obsSearch = this.http.get(url, { headers });
-      return obsSearch
-  }
-
-
+    return this.http.get(url)
+ }
 }
